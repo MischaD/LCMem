@@ -1,0 +1,22 @@
+program: sweep.py     # <- your training entry point
+method: grid 
+metric:
+  name: score
+  goal: maximize
+parameters:
+  #aug.rotate: {values: [20, 30]}
+  #aug.blur: {values: [2.0]}
+  #aug.noise: {distribution: uniform, min: 0.0, max: 0.2}
+  #alpha: {values:[0.2, 0.5, 0.8]}
+  #learning_rate: {values: [2e-3]}
+  #eta_min: {values: [0.01]}
+  #dino_layer: {values: [12,]}
+  #dino_out_method: {values: [cls_only]}
+  #dropout: {values: [0.0]}
+  max_epochs: {value: 5}
+  #sigmoid_out: {values: [True]}
+  config_path: {values: [config_baseline.json, config_dinov3.json, config_dinov3ft.json, config_nxt_512.json]}
+  filelist: {value: ../../datasets/alldatasets_trainvalbalanced.csv}
+  do_test: {value: False}
+  distributed: {value: True}
+  basedir: {value: "/hnvme/workspace/b180dc10-syneverything/datasets"}

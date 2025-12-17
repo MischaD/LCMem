@@ -1,0 +1,17 @@
+program: sweep.py     # <- your training entry point
+method: bayes
+metric:
+  name: score
+  goal: maximize
+parameters:
+  aug.rotate: {values: [5, 10, 15, 20]}
+  aug.blur: {values: [2.0]}
+  aug.noise: {distribution: uniform, min: 0.0, max: 0.2}
+  alpha: {distribution: uniform, min: 0.6, max: 0.9}
+  learning_rate: {values: [1e-5, 5e-5, 1e-4, 5e-4,]}
+  dino_layer: {values: [0, 1, 4]}
+  dino_out_method: {values: [cls_only, both]}
+  dropout: {values: [0.0]}
+  config_path: {value: config_dinov3_hf_ft.json}
+  filelist: {value: ../../eight_cxr8.csv}
+  image_pairs_test: {value: ../../TEST_pairs_cxr8.txt}
