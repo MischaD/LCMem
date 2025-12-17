@@ -3,7 +3,7 @@
 This repository contains the official implementation of LCMem.
 
 ## Overview
-LCMem is a two-stage training process for detecting memorization in diffusion models. 
+LCMem is a two-stage training process for detecting memorization in generative models. 
 1. **Stage 1**: Train a Siamese network using precomputed latents.
 2. **Stage 2**: Fine-tune the network in image space with strong augmentations.
 
@@ -66,4 +66,25 @@ This script demonstrates how to instantiate the `ImageSpaceSiameseDetector`.
 You can run the full benchmark using:
 ```bash
 python benchmark.py --filelist <path_to_lists> --basedir <path_to_images>
+```
+
+
+## Model availability
+
+Since Stable Diffusion v2 is no longer publically available, we cannot release the model weights right now. We are working on a solution. 
+
+
+
+## Citation
+If you find this work useful, please cite our paper:
+```bibtex
+@misc{dombrowski2025lcmemuniversalmodelrobust,
+      title={LCMem: A Universal Model for Robust Image Memorization Detection}, 
+      author={Mischa Dombrowski and Felix Nützel and Bernhard Kainz},
+      year={2025},
+      eprint={2512.14421},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.14421}, 
+}
 ```
