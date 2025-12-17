@@ -1,0 +1,45 @@
+{
+	"experiment_description": "FineTune-ImageSpace-stronger4",
+	"resumption": false,
+	"resumption_count": null,
+	"previous_experiment": null,
+	"image_path": "/vol/ideadata/ed52egek/data/chestxray14/",
+	"siamese_architecture": "ConvNeXt-Tiny",
+  
+	"num_workers": 8,
+	"pin_memory": true,
+  
+	"input_type": "image",
+	"use_image_space_network": true,
+	"vae_model_path": "stabilityai/stable-diffusion-2",
+	"final_mean": 0.0,
+	"final_std": 0.5,
+	"n_channels": 4, 
+	"nce": true,
+	"layer": -1,
+	"n_features": 512,
+	"image_size": 512,
+	"loss": "BCEWithLogitsLoss",
+	"optimizer": "Adam",
+	"learning_rate": 0.00008,
+	"alpha": 0.80,
+	"batch_size": 64,
+	"early_stopping": 5,
+	"transform": "default",
+	"mini_epoch_size": 186733,
+	"max_epochs": 20,
+	"dropout": 0.0,
+	"eta_min": 1.0,
+	"finetune_backbone": true,
+	"model_path": "/vol/ideadata/ed52egek/pycharm/syneverything/models/camera_ready08_wnorm_best_network.pth",
+	"aug": {
+		"rotate": 20,
+		"flip": true,
+		"blur": 0.2,
+		"noise": 0.05,
+		"brightness": 1.0,
+		"contrast": 1.0,
+		"jpeg_compression": [10, 95]
+	  }
+  }
+
